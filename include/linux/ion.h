@@ -343,7 +343,7 @@ struct ion_allocation_data {
 	unsigned int heap_mask;
 	unsigned int heap_id_mask;
 	unsigned int flags;
-	struct ion_handle *handle;
+	ion_user_handle_t handle;
 };
 
 /**
@@ -357,7 +357,7 @@ struct ion_allocation_data {
  * provides the file descriptor and the kernel returns the handle.
  */
 struct ion_fd_data {
-	struct ion_handle *handle;
+	ion_user_handle_t handle;
 	int fd;
 };
 
@@ -366,7 +366,7 @@ struct ion_fd_data {
  * @handle:	a handle
  */
 struct ion_handle_data {
-	struct ion_handle *handle;
+	ion_user_handle_t handle;
 };
 
 /**
